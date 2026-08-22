@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Squirrel Hat - We make small software.</title>
+<meta name="description" content="Squirrel Hat LLC is a tiny software company. We build little apps that do one thing well, and take on the occasional bigger job for people we like.">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+<div class="sh-page">
+
+  <nav class="nav sh-nav">
+    <a href="#top" class="nav-brand">
+      <img class="sh-brand-mark" src="assets/mascot.svg" alt="" />
+      Squirrel Hat
+    </a>
+    <a href="#work">What we do</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="top" class="sh-hero">
+    <div class="sh-hero-copy">
+      <h1>We make small software.</h1>
+      <p class="sh-hero-lede">A tiny software company with a big acorn stash. We build little apps that do one thing well, and we take on the occasional bigger job for people we like.</p>
+      <div class="sh-hero-actions">
+        <a href="#contact" class="btn btn-primary">Say hello</a>
+        <!-- <a href="#work" class="btn btn-secondary">See what we do</a> -->
+      </div>
+    </div>
+
+    <div class="sh-mascot-wrap">
+      <img class="sh-mascot" src="assets/mascot.svg" alt="Squirrel Hat mascot — a squirrel wearing an acorn cap" />
+    </div>
+  </section>
+
+  <!-- <section id="work" class="sh-work">
+    <h6>What we do</h6>
+    <h2>Three hats, hung by the door.</h2>
+    <p class="sh-work-lede">We're new, so the shelf is still mostly empty — but here's the shape of the work.</p>
+
+    <div class="sh-work-grid">
+      <div class="card elev-sm">
+        <span class="sh-dot sh-dot--apps"></span>
+        <div class="card-title">Little apps</div>
+        <p class="card-body">Small, unrelated tools that scratch a specific itch. No dashboards, no onboarding flow, no five-year roadmap. Just the thing you needed.</p>
+      </div>
+      <div class="card elev-sm">
+        <span class="sh-dot sh-dot--work"></span>
+        <div class="card-title">Software work</div>
+        <p class="card-body">Building, fixing, or finishing software for other people. Prototypes, internal tools, the app that's been 90% done since spring.</p>
+      </div>
+      <div class="card elev-sm">
+        <span class="sh-dot sh-dot--experiments"></span>
+        <div class="card-title">Odd experiments</div>
+        <p class="card-body">Things we build because we're curious. Some become products, most stay in the tree. You'll hear about them either way.</p>
+      </div>
+    </div>
+  </section> -->
+
+  <section id="contact" class="sh-contact">
+    <div class="sh-contact-grid">
+      <div>
+        <h6>Contact</h6>
+        <h2>Got something small in mind?</h2>
+        <p class="sh-contact-lede">Tell us what you're working on and we'll write back. </p>
+        <p class="sh-contact-email"><a href="mailto:info@squirrelhat.org">info@squirrelhat.org</a></p>
+      </div>
+
+      <div class="card elev-md sh-contact-card">
+        <div id="sh-sent" class="sh-sent">
+          <span class="sh-sent-icon"></span>
+          <div class="sh-sent-title">Stashed away safely.</div>
+          <p class="sh-sent-body">Thanks <span id="sh-sent-name"></span> — your note is in the pile and we'll get back to you shortly.</p>
+          <button type="button" id="sh-reset" class="btn btn-secondary">Send another</button>
+        </div>
+
+        <form id="sh-contact-form" class="sh-form">
+          <div class="sh-form-row">
+            <div class="field">
+              <label for="sh-name">Name</label>
+              <input id="sh-name" class="input" name="name" required placeholder="Your name" />
+            </div>
+            <div class="field">
+              <label for="sh-email">Email</label>
+              <input id="sh-email" class="input" name="email" type="email" required placeholder="you@example.com" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="sh-company">Company <span class="text-muted">(optional)</span></label>
+            <input id="sh-company" class="input" name="company" placeholder="Where you're writing from" />
+          </div>
+          <div class="field">
+            <label for="sh-message">Message</label>
+            <textarea id="sh-message" class="input" name="message" required placeholder="What are you building, breaking, or wondering about?"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Send it over</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="sh-footer">
+    <div class="sh-footer-brand">
+      <img class="sh-footer-mark" src="assets/mascot.svg" alt="" />
+      Squirrel Hat LLC
+    </div>
+    <div class="sh-footer-links">
+      <span>squirrelhat.org</span>
+      <a href="mailto:info@squirrelhat.org">info@squirrelhat.org</a>
+      <span>© 2026</span>
+    </div>
+  </footer>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
