@@ -1,7 +1,9 @@
 (function () {
   "use strict";
 
-  // Contact form: swap between the form and the "sent" confirmation.
+  // Contact form: build a mailto: link from the fields and hand off to the
+  // visitor's own email client, so no backend or third-party form service is needed.
+  var CONTACT_EMAIL = "info@squirrelhat.org";
   var form = document.getElementById("sh-contact-form");
   var sentView = document.getElementById("sh-sent");
   var sentName = document.getElementById("sh-sent-name");
@@ -10,8 +12,27 @@
   if (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-      var name = (new FormData(form).get("name") || "").toString().trim().split(" ")[0];
-      sentName.textContent = name;
+      var data = new FormData(form);
+      var name = (data.get("name") || "").toString().trim();
+      var email = (data.get("email") || "").toString().trim();
+      var company = (data.get("company") || "").toString().trim();
+      var message = (data.get("message") || "").toString().trim();
+
+      var subject = "Hello from " + name;
+      var bodyLines = [
+        "Name: " + name,
+        "Email: " + email
+      ];
+      if (company) bodyLines.push("Company: " + company);
+      bodyLines.push("", message);
+
+      var mailto = "mailto:" + encodeURIComponent(CONTACT_EMAIL) +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(bodyLines.join("\n"));
+
+      window.location.href = mailto;
+
+      sentName.textContent = name.split(" ")[0];
       form.classList.add("is-hidden");
       sentView.classList.add("is-visible");
     });
