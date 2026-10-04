@@ -334,6 +334,31 @@ body { overflow-x: hidden; }
   font-size: 14px; color: var(--color-neutral-700);
 }
 
+/* — long-form document pages (privacy policies, terms) — */
+.sh-doc {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: clamp(24px, 5vw, 48px) clamp(20px, 5vw, 32px) clamp(48px, 8vw, 80px);
+  font-size: 16px;
+  line-height: 1.65;
+}
+.sh-doc h6 { color: var(--color-accent-700); margin: 0 0 14px; }
+.sh-doc h1 { font-size: clamp(36px, 6vw, 56px); margin: 0; }
+.sh-doc h2 { font-size: clamp(22px, 3vw, 26px); margin: 40px 0 12px; }
+.sh-doc h3 { font-size: 19px; margin: 28px 0 10px; }
+.sh-doc-meta { color: var(--color-neutral-700); font-size: 14px; margin: 12px 0 32px; }
+.sh-doc ul, .sh-doc ol { padding-left: 1.4em; margin: 0 0 var(--space-3); }
+.sh-doc li { margin-bottom: 6px; }
+.sh-doc a { text-decoration: underline; }
+.sh-doc-table { overflow-x: auto; margin: 0 0 var(--space-4); }
+.sh-doc table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.sh-doc th, .sh-doc td {
+  text-align: left; vertical-align: top;
+  padding: 10px 14px; border-bottom: 1px solid var(--color-divider);
+}
+.sh-doc th { font-weight: 700; background: var(--color-surface); }
+.sh-doc td:first-child { white-space: nowrap; }
+
 @keyframes sh-crumb {
   0% { transform: scale(1); opacity: .75; }
   100% { transform: scale(.2) translateY(14px); opacity: 0; }
